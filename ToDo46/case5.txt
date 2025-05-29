@@ -1,0 +1,14 @@
+                    case 5 -> { // 今日の目標を確認する (配列対応版)
+                        System.out.println("\n--- 今日の目標一覧 ---");
+                        if (nextGoalIndex == 0) { // まだ何も目標が登録されていないかチェック
+                            System.out.println("今日の目標は設定されていません。");
+                        } else {
+                               for (int i = 0; i < nextGoalIndex; i++) { // 登録されている数だけループ
+                                    // goals[i] が null でないことを確認する方がより安全ですが、
+                                    // 今回は nextGoalIndex までに必ず目標がある想定です。
+                                    // (削除機能などを追加する場合はnullチェックが重要になります)
+                                    System.out.println((i + 1) + ". " + goals[i]);
+                                }
+                        }
+                        System.out.println("--------------------");
+                    }

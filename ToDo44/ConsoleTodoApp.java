@@ -1,4 +1,4 @@
-package ToDo46;
+package ToDo44;
 
 import java.util.Scanner;
 
@@ -13,10 +13,6 @@ class ConsoleTodoApp {
         boolean[] todoStatuses = new boolean[maxTodos];
 
         int nextTodoIndex = 0;
-
-        int maxGoals = 3;
-        String[] goals = new String[maxGoals];
-        int nextGoalIndex = 0;
 
         System.out.println("ToDoアプリへようこそ!");
         do{
@@ -95,31 +91,32 @@ class ConsoleTodoApp {
                         }
                         System.out.println("---------------------");
                     }
-                    case 4 -> { // 今日の目標を設定 (配列対応版)
-                        if (nextGoalIndex < maxGoals) { // 配列に空きがあるか確認
-                            System.out.print("設定する目標を入力してください: ");
-                            String newGoal = scanner.nextLine();
-                            goals[nextGoalIndex] = newGoal; // 次の空き場所に目標を格納
-                            System.out.println("目標「" + goals[nextGoalIndex] + "」を設定しました。");
-                            nextGoalIndex++; // 次に登録するインデックスを一つ進める
+					/*
+                    case 4 -> {
+                        System.out.print("設定する目標を入力してください: ");
+                        String newGoal = scanner.nextLine();
+                        if(!currentGoal.isEmpty()){
+                            System.out.print("既に目標「" + currentGoal + "」が設定されています。上書きしますか? (yes/no): ");
+                            String confirm = scanner.nextLine();
+                            if(confirm.equalsIgnoreCase("yes")){
+                                currentGoal = newGoal;
+                                System.out.println("目標を「" + currentGoal + "」に更新しました。");
+                            } else {
+                                System.out.println("目標の設定をキャンセルしました。");
+                            }
                         } else {
-                            System.out.println("目標リストがいっぱいです。これ以上設定できません。(" + maxGoals + "個まで)");
+                            currentGoal = newGoal;
+                            System.out.println("目標を「" + currentGoal + "」に設定しました。");
                         }
                     }
-                    case 5 -> { // 今日の目標を確認する (配列対応版)
-                        System.out.println("\n--- 今日の目標一覧 ---");
-                        if (nextGoalIndex == 0) { // まだ何も目標が登録されていないかチェック
-                            System.out.println("今日の目標は設定されていません。");
+                    case 5 -> {
+                        if(!currentGoal.isEmpty()) {
+                            System.out.println("今日の目標: " + currentGoal);
                         } else {
-                               for (int i = 0; i < nextGoalIndex; i++) { // 登録されている数だけループ
-                                    // goals[i] が null でないことを確認する方がより安全ですが、
-                                    // 今回は nextGoalIndex までに必ず目標がある想定です。
-                                    // (削除機能などを追加する場合はnullチェックが重要になります)
-                                    System.out.println((i + 1) + ". " + goals[i]);
-                                }
+                            System.out.println("今日の目標は設定されていません。");
                         }
-                        System.out.println("--------------------");
-                    }             
+                    }
+					*/
                     case 6 -> { // 終了
                         System.out.println("終了処理中...");
                     }

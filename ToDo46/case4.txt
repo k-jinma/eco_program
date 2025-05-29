@@ -1,0 +1,11 @@
+                    case 4 -> { // 今日の目標を設定 (配列対応版)
+                        if (nextGoalIndex < maxGoals) { // 配列に空きがあるか確認
+                            System.out.print("設定する目標を入力してください: ");
+                            String newGoal = scanner.nextLine();
+                            goals[nextGoalIndex] = newGoal; // 次の空き場所に目標を格納
+                            System.out.println("目標「" + goals[nextGoalIndex] + "」を設定しました。");
+                            nextGoalIndex++; // 次に登録するインデックスを一つ進める
+                        } else {
+                            System.out.println("目標リストがいっぱいです。これ以上設定できません。(" + maxGoals + "個まで)");
+                        }
+                    }
