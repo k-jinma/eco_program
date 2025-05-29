@@ -52,13 +52,16 @@ class ConsoleTodoApp {
                         }
                     }
                     case 3 -> {
-                        // currentTodo変数が空かどうかチェック (isEmpty()機能を使用)
-                        if (!currentTodo.isEmpty()) { 
-                            String status = isTodoCompleted ? "完了" : "未完了";
-                            System.out.println("今日のToDo: " + currentTodo + " (" + status + ")");
-                        } else {
+                        System.out.println("\n=== 今日のToDo一覧 ===");
+                        if(nextTodoIndex > 0){
                             System.out.println("今日のToDoは登録されていません。");
+                        }else{
+                            for(int i = 0; i < nextTodoIndex; i++){
+                                String status = todoStatuses[i] ? "完了" : "未完了";
+                                System.out.println((i+1) + ". " + todos[i] + " (" + status + ")");
+                            }
                         }
+                        System.out.println("---------------------");
                     }
                     case 4 -> {
                         System.out.print("設定する目標を入力してください: ");
