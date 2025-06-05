@@ -1,4 +1,4 @@
-
+package ToDo38;
 import java.util.Scanner;
 
 class ConsoleTodoApp {
@@ -7,6 +7,7 @@ class ConsoleTodoApp {
         int choice;
     
         int maxTodos = 5;
+		int maxGoles = 3;
 
         String[] todos = new String[maxTodos];
         boolean[] todoStatuses = new boolean[maxTodos];
@@ -31,66 +32,42 @@ class ConsoleTodoApp {
                 
                 switch(choice){
                     case 1 -> {
-                        if(nextTodoIndex < maxTodos){
-                            System.out.print("登録するToDoを入力してください:");
-                            String newTodo = scanner.nextLine();
-
-                            todos[nextTodoIndex] = newTodo; // ToDoを登録
-                            todoStatuses[nextTodoIndex] = false; // 初期状態は未完了
-                            System.out.println("ToDo「" + newTodo + "」を登録しました。");
-                            nextTodoIndex++;
-                        }else{
-                            System.out.println("ToDoリストがいっぱいです。これ以上登録できません。");
+                        System.out.print("登録するToDoを入力してください:");
+                        String newTodo = scanner.nextLine();
+                        if(!currentTodo.isEmpty()){
+                            System.out.println("現在のToDo「" + currentTodo + "」が登録されています。上書きしますか? (yes/no):");
+                            String confirm = scanner.nextLine();
+                            if(confirm.equalsIgnoreCase("yes")){
+                                currentTodo = newTodo;
+                                isTodoCompleted = false;
+                                System.out.println("ToDo「" + currentTodo + "」に更新しました。");
+                            } else {
+                                System.out.println("ToDoの登録をキャンセルしました。");
+                            }
+                        } else {
+                            currentTodo = newTodo;
+                            isTodoCompleted = false;
+                            System.out.println("ToDo「" + currentTodo + "」を登録しました。");
                         }
 
                     }
                     case 2 -> { // ToDoを完了
-                        if (nextTodoIndex == 0) {
-                            System.out.println("ToDoが登録されていません。\n完了にするToDoがありません。");
+                        if (!currentTodo.isEmpty()) { // ToDoが登録されているかチェック
+                            isTodoCompleted = true; // 完了状態にする
+                            System.out.println("ToDo「" + currentTodo + "」を完了にしました！");
                         } else {
-                            System.out.println("\n--- 完了するToDoを選択してください ---");
-                            for (int i = 0; i < nextTodoIndex; i++) {
-                                System.out.println((i + 1) + ". " + todos[i] + (todoStatuses[i] ? " (完了済み)" : " (未完了)"));
-                            }
-                            System.out.print("完了にするToDoの番号を入力してください (1-" + nextTodoIndex + "): ");
-                            if (scanner.hasNextInt()) {
-                                int inputNum = scanner.nextInt();
-                                scanner.nextLine(); // nextIntの後の改行読み飛ばし
-
-                                // 入力チェック
-                                if (inputNum > 0 && inputNum <= nextTodoIndex) {
-                                    int targetIndex = inputNum - 1;
-
-                                    if (!todoStatuses[targetIndex]) { // まだ未完了の場合
-                                        todoStatuses[targetIndex] = true; // 完了にする
-                                        System.out.println("ToDo「" + todos[targetIndex] + "」を完了にしました！");
-                                    } else {
-                                        System.out.println("ToDo「" + todos[targetIndex] + "」は既に完了済みです。");
-                                    }
-                                } else {
-                                    System.out.println("無効な番号です。1から" + nextTodoIndex + "の間で入力してください。");
-                                }
-
-                            } else {
-                                System.out.println("番号を数字で入力してください。");
-                                scanner.nextLine(); // 不正な入力を読み飛ばす
-                            }
+                            System.out.println("ToDoが登録されていません。完了にするToDoがありません。");
                         }
                     }
-
                     case 3 -> {
-                        System.out.println("\n=== 今日のToDo一覧 ===");
-                        if(nextTodoIndex == 0){
+                        // currentTodo変数が空かどうかチェック (isEmpty()機能を使用)
+                        if (!currentTodo.isEmpty()) { 
+                            String status = isTodoCompleted ? "完了" : "未完了";
+                            System.out.println("今日のToDo: " + currentTodo + " (" + status + ")");
+                        } else {
                             System.out.println("今日のToDoは登録されていません。");
-                        }else{
-                            for(int i = 0; i < nextTodoIndex; i++){
-                                String status = todoStatuses[i] ? "完了" : "未完了";
-                                System.out.println((i+1) + ". " + todos[i] + " (" + status + ")");
-                            }
                         }
-                        System.out.println("---------------------");
                     }
-					/*
                     case 4 -> {
                         System.out.print("設定する目標を入力してください: ");
                         String newGoal = scanner.nextLine();
@@ -115,7 +92,6 @@ class ConsoleTodoApp {
                             System.out.println("今日の目標は設定されていません。");
                         }
                     }
-					*/
                     case 6 -> { // 終了
                         System.out.println("終了処理中...");
                     }

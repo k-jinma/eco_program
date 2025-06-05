@@ -1,0 +1,14 @@
+                    case 1 -> {
+                        if(nextTodoIndex < maxTodos){
+                            System.out.print("登録するToDoを入力してください:");
+                            String newTodo = scanner.nextLine();
+
+                            todos[nextTodoIndex] = newTodo; // ToDoを登録
+                            todoStatuses[nextTodoIndex] = false; // 初期状態は未完了
+                            System.out.println("ToDo「" + newTodo + "」を登録しました。");
+                            nextTodoIndex++;
+                        }else{
+                            System.out.println("ToDoリストがいっぱいです。これ以上登録できません。");
+                        }
+
+                    }

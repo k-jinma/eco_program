@@ -1,0 +1,338 @@
+{
+    // IntelliSense を使用して利用可能な属性を学べます。
+    // 既存の属性の説明をホバーして表示します。
+    // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "ConsoleTodoApp",
+            "request": "launch",
+            "mainClass": "ToDo46.ConsoleTodoApp",
+            "projectName": "eco_program_1fe54386"
+        },
+        {
+            "type": "java",
+            "name": "Fruit",
+            "request": "launch",
+            "mainClass": "p47.Fruit",
+            "projectName": "eco_program_e02fd729",
+            "args": "Apple Banana Grape"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "AdventureRideChecker",
+            "request": "launch",
+            "mainClass": "AdventureRideChecker",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "BasicForLoop",
+            "request": "launch",
+            "mainClass": "BasicForLoop",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "CafeOrder",
+            "request": "launch",
+            "mainClass": "CafeOrder",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "CafeOrderCSV",
+            "request": "launch",
+            "mainClass": "CafeOrderCSV",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "ConsoleTodoApp",
+            "request": "launch",
+            "mainClass": "ConsoleTodoApp",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "DrawTriangle",
+            "request": "launch",
+            "mainClass": "DrawTriangle",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "Ens19_1",
+            "request": "launch",
+            "mainClass": "Ens19_1",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "Ens23_1",
+            "request": "launch",
+            "mainClass": "Ens23_1",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "Ens23_2",
+            "request": "launch",
+            "mainClass": "Ens23_2",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "Ens25_1",
+            "request": "launch",
+            "mainClass": "Ens25_1",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "Ens31_1",
+            "request": "launch",
+            "mainClass": "Ens31_1",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "Ens31_2",
+            "request": "launch",
+            "mainClass": "Ens31_2",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "Ens33_1",
+            "request": "launch",
+            "mainClass": "Ens33_1",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "Ens36_1",
+            "request": "launch",
+            "mainClass": "Ens36_1",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "Exp17_1",
+            "request": "launch",
+            "mainClass": "Exp17_1",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "Exp18_1",
+            "request": "launch",
+            "mainClass": "Exp18_1",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "Exp19_1",
+            "request": "launch",
+            "mainClass": "Exp19_1",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "Exp22_1",
+            "request": "launch",
+            "mainClass": "Exp22_1",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "Exp22_3",
+            "request": "launch",
+            "mainClass": "Exp22_3",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "GradeReporter",
+            "request": "launch",
+            "mainClass": "GradeReporter",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "GuessTheNumber",
+            "request": "launch",
+            "mainClass": "GuessTheNumber",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "InfiniteLoop",
+            "request": "launch",
+            "mainClass": "InfiniteLoop",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "JankenGame",
+            "request": "launch",
+            "mainClass": "JankenGame",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "KukuTable",
+            "request": "launch",
+            "mainClass": "KukuTable",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "MenuSelection",
+            "request": "launch",
+            "mainClass": "MenuSelection",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "QuickCheckTernary",
+            "request": "launch",
+            "mainClass": "QuickCheckTernary",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "Ren0521",
+            "request": "launch",
+            "mainClass": "Ren0521",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "RestaurantOrderCheck",
+            "request": "launch",
+            "mainClass": "RestaurantOrderCheck",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "Sample",
+            "request": "launch",
+            "mainClass": "Sample",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "SavingManager",
+            "request": "launch",
+            "mainClass": "SavingManager",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "ScoreBasedMessage",
+            "request": "launch",
+            "mainClass": "ScoreBasedMessage",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "SimpleSlotMachine",
+            "request": "launch",
+            "mainClass": "SimpleSlotMachine",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "SimpleSlotMachineKaitou",
+            "request": "launch",
+            "mainClass": "SimpleSlotMachineKaitou",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "Test",
+            "request": "launch",
+            "mainClass": "Test",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "Test20_1",
+            "request": "launch",
+            "mainClass": "Test20_1",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "ConsoleTodoApp(1)",
+            "request": "launch",
+            "mainClass": "ToDo38.ConsoleTodoApp",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "ConsoleTodoApp(2)",
+            "request": "launch",
+            "mainClass": "ToDo44.ConsoleTodoApp",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "ConsoleTodoApp(3)",
+            "request": "launch",
+            "mainClass": "ToDo46.ConsoleTodoApp",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "Toi3",
+            "request": "launch",
+            "mainClass": "Toi3",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "WhileSample2",
+            "request": "launch",
+            "mainClass": "WhileSample2",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "WhileVsDoWhileCompare",
+            "request": "launch",
+            "mainClass": "WhileVsDoWhileCompare",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "Ens36_1(1)",
+            "request": "launch",
+            "mainClass": "ens36.Ens36_1",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "kuku",
+            "request": "launch",
+            "mainClass": "kuku",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "DiscountCalculator",
+            "request": "launch",
+            "mainClass": "p47.DiscountCalculator",
+            "projectName": "eco_program_e02fd729",
+            "args": "5000 15"
+        }
+    ]
+}

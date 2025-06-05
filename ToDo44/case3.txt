@@ -1,0 +1,12 @@
+                    case 3 -> {
+                        System.out.println("\n=== 今日のToDo一覧 ===");
+                        if(nextTodoIndex == 0){
+                            System.out.println("今日のToDoは登録されていません。");
+                        }else{
+                            for(int i = 0; i < nextTodoIndex; i++){
+                                String status = todoStatuses[i] ? "完了" : "未完了";
+                                System.out.println((i+1) + ". " + todos[i] + " (" + status + ")");
+                            }
+                        }
+                        System.out.println("---------------------");
+                    }
