@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 class ConsoleTodoApp {
@@ -7,11 +6,15 @@ class ConsoleTodoApp {
         int choice;
     
         int maxTodos = 5;
-
         String[] todos = new String[maxTodos];
         boolean[] todoStatuses = new boolean[maxTodos];
-
-        int nextTodoIndex = 0;
+		int nextTodoIndex = 0;
+		
+		int maxGoals = 3;	// 目標数
+		String[] goals = new String[maxGoals];	// 目標の配列
+		int nextGoalIndex = 0;	// 次に登録する目標の場所
+		
+		
 
         System.out.println("ToDoアプリへようこそ!");
         do{
@@ -90,32 +93,34 @@ class ConsoleTodoApp {
                         }
                         System.out.println("---------------------");
                     }
-					/*
+					
                     case 4 -> {
-                        System.out.print("設定する目標を入力してください: ");
-                        String newGoal = scanner.nextLine();
-                        if(!currentGoal.isEmpty()){
-                            System.out.print("既に目標「" + currentGoal + "」が設定されています。上書きしますか? (yes/no): ");
-                            String confirm = scanner.nextLine();
-                            if(confirm.equalsIgnoreCase("yes")){
-                                currentGoal = newGoal;
-                                System.out.println("目標を「" + currentGoal + "」に更新しました。");
-                            } else {
-                                System.out.println("目標の設定をキャンセルしました。");
-                            }
-                        } else {
-                            currentGoal = newGoal;
-                            System.out.println("目標を「" + currentGoal + "」に設定しました。");
-                        }
+						if(nextGoalIndex < maxGoals){
+							System.out.print("設定する目標を入力してください:");
+							String newGoal = scanner.nextLine();
+							goals[nextGoalIndex] = newGoal;
+							nextGoalIndex++;
+						
+						}else{
+							System.out.println("目標リストがいっぱいです。これ以上設定できません。(" + maxGoals + "個まで");
+						
+						}
                     }
                     case 5 -> {
-                        if(!currentGoal.isEmpty()) {
-                            System.out.println("今日の目標: " + currentGoal);
-                        } else {
-                            System.out.println("今日の目標は設定されていません。");
-                        }
+						System.out.println("\n--- 今日の目標一覧 ;---");
+						if(nextGoalIndex == 0){
+							System.out.println("今日の目標は設定されていません。");
+						}else{
+							
+							for( int i = 0; i < nextGoalIndex; i++ ){
+								System.out.println((i+1) + ". " + goals[i]);
+							}
+							
+						}
+						System.out.println("------------------");
+
                     }
-					*/
+					
                     case 6 -> { // 終了
                         System.out.println("終了処理中...");
                     }

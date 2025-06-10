@@ -1,5 +1,3 @@
-package ToDo46;
-
 import java.util.Scanner;
 
 class ConsoleTodoApp {
