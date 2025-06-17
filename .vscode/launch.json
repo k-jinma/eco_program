@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SalesDataDisplay",
+            "request": "launch",
+            "mainClass": "SalesDataDisplay",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "Ens59_1",
+            "request": "launch",
+            "mainClass": "Ens59_1",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "JaggedArray",
+            "request": "launch",
+            "mainClass": "JaggedArray",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
             "name": "ConsoleTodoApp",
             "request": "launch",
             "mainClass": "ToDo46.ConsoleTodoApp",
