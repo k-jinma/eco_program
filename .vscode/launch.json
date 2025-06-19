@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SalesDataDisplayEnd",
+            "request": "launch",
+            "mainClass": "SalesDataDisplayEnd",
+            "projectName": "eco_program_1fe54386"
+        },
+        {
+            "type": "java",
+            "name": "SalesDataDisplay",
+            "request": "launch",
+            "mainClass": "SalesDataDisplay",
+            "projectName": "eco_program_1fe54386"
+        },
+        {
+            "type": "java",
             "name": "SalesDataDisplay",
             "request": "launch",
             "mainClass": "SalesDataDisplay",

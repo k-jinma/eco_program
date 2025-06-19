@@ -6,27 +6,26 @@ public class SalesDataDisplay {
 
     // mainメソッドがFileNotFoundExceptionをスローする可能性を宣言
     public static void main(String[] args) throws Exception {
-        String filePath = "./data.csv"; // 読み込むCSVファイル名
-        String csvDelimiter = ",";             // CSVの区切り文字
 
-        int rowCount = 0;
-        int maxColCount = 0;
+        int rowCount = 0; // 行数をカウントする変数
+        int maxColCount = 0; // 最大列数をカウントする変数
 
         // --- 最初のパス: 行数と最大列数をカウント ---
-        // Scannerをクローズするため、ここでもnew Scanner()とnew File()はスコープを分ける
-        File fileForCount = new File(filePath);
+        // 
+        File fileForCount = new File("./data.csv"); // ファイルを指定
         Scanner scanner = new Scanner(fileForCount, "UTF-8"); // 文字コードをUTF-8に指定
 
         // ヘッダー行を読み飛ばす (カウントに含めない)
         if (scanner.hasNextLine()) {
-            scanner.nextLine(); // ヘッダー行を読み飛ばす
+            scanner.nextLine(); // １行読み込んでヘッダー行を読み飛ばす
         }
 
-        while (scanner.hasNextLine()) {
+        while (scanner.hasNextLine()) { // 次の行が存在する限りループ
             rowCount++;
-            String line = scanner.nextLine();
-            String[] values = line.split(csvDelimiter);
-            if (values.length > maxColCount) {
+            String line = scanner.nextLine(); // 行を読み込む
+            String[] values = line.split(","); // CSVの区切り文字で分割して配列に格納
+            if (values.length > maxColCount) { // 現在の行の列数が最大列数より大きい場合
+                // 最大列数を更新
                 maxColCount = values.length;
             }
         }
@@ -37,7 +36,7 @@ public class SalesDataDisplay {
         int currentRow = 0; // データを格納する現在の行インデックス
 
         // --- 2番目のパス: データを2次元配列に格納 ---
-        File fileForData = new File(filePath);
+        File fileForData = new File("./data.csv");
         Scanner scannerForData = new Scanner(fileForData, StandardCharsets.UTF_8.name()); // 文字コードをUTF-8に指定
 
         // ヘッダー行を読み飛ばす
@@ -45,17 +44,17 @@ public class SalesDataDisplay {
             scannerForData.nextLine();
         }
 
-        while (scannerForData.hasNextLine()) {
-            String line = scannerForData.nextLine();
-            String[] values = line.split(csvDelimiter);
+        while (scannerForData.hasNextLine()) { // 次の行が存在する限りループ
+            String line = scannerForData.nextLine(); // 行を読み込む
+            String[] values = line.split(","); // CSVの区切り文字で分割して配列に格納
 
-            // 各行のデータを配列にコピー (インデックスベース)
+            // 各行のデータを配列にコピー
             for (int j = 0; j < values.length; j++) {
                 if (j < maxColCount) { // 配列の範囲を超えないようにチェック
-                    salesData[currentRow][j] = values[j];
+                    salesData[currentRow][j] = values[j]; 
                 }
             }
-            currentRow++;
+            currentRow++;  // 行を進める
         }
         scannerForData.close(); // Scannerを閉じる
 
