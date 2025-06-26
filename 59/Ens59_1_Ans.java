@@ -1,4 +1,4 @@
-class Ens59_1 {
+class Ens59_1_Ans {
     public static void main(String[] args) {
         int[][] studentGrades = {
             {85, 90},            // 学生1: Java, 経済学

@@ -76,5 +76,18 @@ public class SalesDataDisplay {
             }
             System.out.println();
         }
+	
+	
+		double sum = 0.0;
+		for( int i = 0;i < salesData.length; i++ ){
+			if( "P001".equals(salesData[i][0])){
+				double price = Double.parseDouble(salesData[i][3]);
+				int quantity = Integer.parseInt(salesData[i][4]);
+				sum += price*quantity;
+			}
+		}
+		System.out.println("--- 特定商品(P001) の売上合計金額---");
+		System.out.printf("商品ID: P001 の合計金額:%.2f円", sum);
+
     }
 }

@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Sample64_1",
+            "request": "launch",
+            "mainClass": "Sample64_1",
+            "projectName": "eco_program_e02fd729"
+        },
+        {
+            "type": "java",
+            "name": "Test0619",
+            "request": "launch",
+            "mainClass": "Test0619",
+            "projectName": "eco_program_1fe54386"
+        },
+        {
+            "type": "java",
             "name": "SalesDataDisplayEnd",
             "request": "launch",
             "mainClass": "SalesDataDisplayEnd",
