@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ArrayInputOutput",
+            "request": "launch",
+            "mainClass": "ArrayInputOutput",
+            "projectName": "eco_program_1fe54386"
+        },
+        {
+            "type": "java",
             "name": "Sample64_1",
             "request": "launch",
             "mainClass": "Sample64_1",
