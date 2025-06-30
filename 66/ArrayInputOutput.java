@@ -6,11 +6,8 @@ class ArrayInputOutput {
         // 1. 整数型で10個の要素を持つ配列 `numbers` を宣言し、初期化する
         int[] numbers = new int[10]; 
 
-        // Scannerの変数を作成し、ユーザーからの入力を受け取れるようにする
         Scanner sc = new Scanner(System.in);
 
-        // 2. ユーザーに要素番号と値を入力させ、配列に格納するループを作成
-        //    無効な要素番号が入力された場合はエラーメッセージを表示し、再入力を促すのではなく、その入力処理をスキップしてください。
         while (true) { // 無限ループで入力処理を繰り返す
             System.out.print("値を代入する要素番号（0～9）を入力してください。終了する場合は-1を入力: ");
             int index = sc.nextInt(); // 要素番号の入力
@@ -23,7 +20,7 @@ class ArrayInputOutput {
             // 3. 入力された要素番号が配列の有効な範囲内にあるかチェック
             if (index >= 0 && index < numbers.length) { 
                 System.out.print("要素に代入する整数値を入力してください: ");
-                int value = sc.nextInt(); // 値の入力
+                int value = sc.nextInt();  // 値の入力
                 numbers[index] = value; // 配列に値を代入
                 System.out.println("値を代入しました。");
             } else {
